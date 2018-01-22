@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+															<!--	
+														Author: Andrei Rico
+														Student No: 3106107616
+														Purpose: Calculating the change 
+																 of the amount.
+														Known bugs: None
+														Date:23/03/2017<br>
+														-->
+				
+			
+<html>
+
+	<head>
+		<title>Change Calculator</title>
+		<link rel ="stylesheet" href="css/change.css">
+		<style>
+		
+		html{
+			background-color: #333300;
+		}
+		
+		main{
+			border: 2px solid black;
+			outline: 15px solid grey;
+			margin: 30px;
+			width: 500px;
+			padding-bottom: 50px;
+			}
+		body {
+			margin: 0 auto;
+			margin-top:30px;
+			max-width: 1000px;
+			body: 100%;
+			min-height:100%;
+			border: 10px solid black;
+			outline: 5px solid #b3b300;
+			background-color: white;
+			}
+			
+		</style>
+		
+		<script>
+			
+			var $ = function(id){
+			return document.getElementById(id);
+			}
+			window.onload = function (){
+			$("calculate").onclick = calculate;
+			}
+			
+			function calculate(){
+				var fiftyCents = 50
+				var twentyCents = 20
+				var tenCents = 10
+				var fiveCents = 5
+				
+			var amount = $("cents").value;
+			
+			// calculate change
+			var calculateFiftyCents = parseInt (amount / fiftyCents);
+			var calculateTwentyCents = parseInt( amount % fiftyCents / twentyCents);
+			var calculateTenCents = parseInt( amount % fiftyCents % twentyCents / tenCents);
+			var calculateFiveCents = parseInt( amount % fiftyCents % twentyCents % tenCents / fiveCents);
+			
+			if(amount < 0){ 
+			 alert("Cents must be greater than zero.");
+			}
+			if(amount > 99){ 
+			 alert("Cents must be between 0-99.");
+			}else{
+			
+			// display the change
+			$("fiftyCents").value = calculateFiftyCents;
+			$("twentyCents").value = calculateTwentyCents;
+			$("tenCents").value = calculateTenCents;
+			$("fiveCents").value = calculateFiveCents;
+			}
+			}
+		</script>
+	</head>
+
+	<body>
+	<main>
+		<h1>Change Calculator</h1>
+		<p>
+		<label for="cents">Enter number of cents(0-99):</label>
+		<input type="text" id="cents">
+		<input type="button" id="calculate" value="Calculate"><br><br>
+		</p>
+		<div>
+		<label for="fiveCents">Five Cents</label>
+		<input type="text" id="fiveCents"><br>
+		<label for="tenCents">Ten Cents</label>
+		<input type="text" id="tenCents"><br>
+		<label for="twentyCents">Twenty Cents</label>
+		<input type="text" id="twentyCents"><br>
+		<label for="fiftyCents">Fifty Cents</label>
+		<input type="text" id="fiftyCents"><br>
+		</div>
+	</main>
+		
+		<footer>
+		<a href ="homepage.html"> Back to Home Page </a>
+		</footer>
+	
+		
+	</body>
+
+
+</html>

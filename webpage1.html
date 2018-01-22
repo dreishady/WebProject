@@ -1,0 +1,89 @@
+														<!--
+															Author: Andrei Rico
+															Student No: 3106107616
+															Purpose: Calculating 
+															the length and width
+															to area and perimeter.
+															Known Bugs: none
+															Date:23/03/2017
+															-->
+				
+<!DOCTYPE html>	
+					
+<html>
+
+	<head>
+		<title> Area and Perimeter Calculator</title>
+			<link rel ="stylesheet" href="css/calc.css">
+		<style>
+			html{
+			background-color: #333300;
+		}
+		</style>
+		<script>
+			var $ = function(id){
+			return document.getElementById(id);
+			}
+			
+			function calculateArea(length,width){
+				var area = parseFloat(width * length);
+				return area;
+			} // end of area calculation
+			
+			function calculatePerimeter(length,width){
+				var perimeter = parseFloat(width * 2 + length * 2);
+				return perimeter;
+			} // end of perimeter calculation
+			
+			function calculate(length,width){
+				var length = parseFloat($("length").value);
+				var width = parseFloat($("width").value);
+				
+				if (width < 0){
+				alert("No negative number");
+				}
+				if (length < 0){
+				alert("No negative number");
+				
+				}else{
+				
+				$("area").value = calculateArea(length,width).toFixed(2);
+				$("perimeter").value = calculatePerimeter(length,width).toFixed(2);
+				}
+				} // end of calculation
+				
+				window.onload = function(){
+					$("calculate").onclick = calculate;
+				}
+			
+				
+		</script>
+		
+	</head>
+
+	<body>
+		<main>
+			
+			<h1> Area and Perimeter Calculator </h1>
+			<p>Enter the values below and click "Calculate".<br></p>
+			<label for="length">Length:</label>
+			<input type="text" id="length"><br>
+			<label for="width">Width:</label>
+			<input type="text" id="width"><br>
+			<label for="area">Area:</label>
+			<input type="text" id="area"><br>
+			<label for="perimeter">Perimeter:</label>
+			<input type="text" id="perimeter"><br>
+			<label> &nbsp; </label>
+			<input type="button" id="calculate" value="Calculate">
+		</main>
+		
+		<p id="link">
+		<a href ="homepage.html"> Back to Home Page </a>
+		</p>
+		
+		
+	</body>
+
+
+</html>

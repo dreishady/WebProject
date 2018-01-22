@@ -1,0 +1,62 @@
+	<style>
+		html{
+			background-color: #333300;
+		}
+		
+		body {
+			margin: 0 auto;
+			margin-top:30px;
+			max-width: 1000px;
+			body: 100%;
+			min-height:100%;
+			border: 10px solid black;
+			outline: 5px solid #b3b300;
+			background-color: white;
+		}
+		main{
+				border: 2px solid black;
+				outline: 15px solid grey;
+				width: 500px;
+				margin-left: 100px;
+				margin-top:30px;
+				background-color: white;
+				
+			  }
+		h1{
+			text-align: left;
+			margin: 20px;
+		}
+		label {
+			width: 200px;
+			display: inline-block;
+			text-align: right;
+			padding: 3px;
+		}
+		p{
+		text-align: left;
+		margin: 20px;
+		}
+		#area{
+		background-color: lightgrey;
+		}
+		#perimeter{
+		background-color: lightgrey;
+		}
+		#link{
+			font-size: 150%;
+			margin-left: 80px;
+			padding: 30px;
+		}
+		div{
+			font-size: 20px;
+			margin-left:600px;
+			margin-top: 300px;
+			margin-bottom: 10px;
+			}
+		a{
+		color:#b3b300;
+		}
+		a:hover{
+		color:black;
+		}
+		</style>
